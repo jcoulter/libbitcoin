@@ -1,7 +1,7 @@
 #include <bitcoin/bitcoin.hpp>
 #include <bitcoin/client.hpp>
 #include <string.h>
-#include <bitcoin/bitcoin/chain/script.hpp>
+
 
 using namespace bc;
 using namespace bc::wallet;
@@ -165,8 +165,19 @@ hd_private getPrivateKey(std::string walletMnemonic) {
 }
 
 operation::list witnessProgram(ec_compressed publicKey) {
+    //TODO: My example
     short_hash KeyHash = bitcoin_short_hash(publicKey);
     return {operation(opcode(0)), operation(to_chunk(KeyHash))};
+    //TODO: their example - same output
+
+//    short_hash keyhash_dest = bitcoin_short_hash(publicKey);
+//    operation::list p2wpkh_operations;
+//    p2wpkh_operations.push_back(operation(opcode::push_size_0));
+//    p2wpkh_operations.push_back(operation(to_chunk(keyhash_dest)));
+//
+//    return p2wpkh_operations;
+
+
 }
 
 bc::wallet::hd_private childPrivateKey(bc::wallet::hd_private privKey, int index) {
@@ -219,8 +230,7 @@ payment_address paymentAddressForHardenedDerivationPath(hd_private privateKey, d
 }
 
 
-script
-P2WPKHForHardenedDerivationPath(hd_private privateKey, derivation_path path) {
+script P2WPKHForHardenedDerivationPath(hd_private privateKey, derivation_path path) {
     return script(witnessProgram((compressedPublicKeyForHardenedDerivationPath(privateKey, path))));
 }
 
@@ -256,6 +266,7 @@ usable_address::usable_address(hd_private privateKey, derivation_path path) {
 void createInputFrom(transaction &tx, int input_index, chain::point_value utxo, usable_address usableAddress) {
     cout << "Making input" << input_index << " \n";
 
+
     //Make Input
     input workingInput = input();
     workingInput.set_previous_output(output_point(utxo));
@@ -266,27 +277,32 @@ void createInputFrom(transaction &tx, int input_index, chain::point_value utxo, 
 
     cout << "Making signature" << input_index << " \n";
 
+//    todo: this matches example
     //Make Signature
     script script_code = script::to_pay_key_hash_pattern(bitcoin_short_hash(usableAddress.buildCompressedPublicKey()));
     endorsement sig;
+
+    cout << "tx.inputs()[input_index].previous_output().index() " << tx.inputs()[input_index].previous_output().index() << "\n";
     script().create_endorsement(sig, usableAddress.buildPrivateKey().secret(), script_code, tx,
                                 tx.inputs()[input_index].previous_output().index(), sighash_algorithm::all,
                                 script_version::zero, previous_amount);
 
-    cout << "Making Witness" << input_index << " \n";
-
-    //Make Witness
-    data_stack witness_data{to_chunk(sig), to_chunk(usableAddress.buildCompressedPublicKey())};
-    tx.inputs()[input_index].set_witness(witness(witness_data));
-
     cout << "Making input script" << input_index << " \n";
 
     //set input script
-    data_chunk scriptChunk = to_chunk(usableAddress.buildP2WPKH().to_data(1));
+    data_chunk scriptChunk = to_chunk(usableAddress.buildP2WPKH().to_data(true));
     tx.inputs()[input_index].set_script(script(scriptChunk, false));
 
     std::cout << "input [" << input_index << "] P2SH Script: " << tx.inputs()[input_index].script().to_string(0)
               << std::endl;
+
+
+    cout << "Making Witness" << input_index << " \n";
+
+    //Make Witness
+    data_stack witness_data{sig, to_chunk(usableAddress.buildCompressedPublicKey())};
+//    data_stack witness_data{to_chunk(sig), to_chunk(usableAddress.buildCompressedPublicKey())};
+    tx.inputs()[input_index].set_witness(witness(witness_data));
 
 }
 
@@ -309,26 +325,23 @@ void createPayToKeyOutputFrom(transaction &tx, payment_address address, uint64_t
 int main() {
 
     // hd_private privateKey = getPrivateKey("retire detect ceiling lab labor approve busy easy swing adjust dumb north");
-    hd_private privateKey = getPrivateKey("sad post like task render prefer attitude advice hazard cruel guitar coral");
-//	hd_private privateKey = getPrivateKey("company rail code drop garlic weird enable month lyrics faint educate pilot marine orphan boat");
+//    hd_private privateKey = getPrivateKey("sad post like task render prefer attitude advice hazard cruel guitar coral");
+	hd_private privateKey = getPrivateKey("company rail code drop garlic weird enable month lyrics faint educate pilot marine orphan boat");
 
-    derivation_path input1_path(49, 1, 0, 0, 0);
-    derivation_path change_path(49, 1, 0, 1, 0);
+//    derivation_path input1_path(49, 1, 0, 0, 0);
+//    derivation_path change_path(49, 1, 0, 1, 0);
 
 
-    usable_address input1(privateKey, input1_path);
-    usable_address change(privateKey, change_path);
+    usable_address input1(privateKey, derivation_path(49, 1, 0, 0, 2));
 
-//    ec_compressed input1_CompressedPublicKey = input1.buildCompressedPublicKey();
-//    script input1_P2WPKH = input1.buildP2WPKH();
-//    bc::wallet::hd_private input1_privateKey = input1.buildPrivateKey();
+    usable_address change(privateKey, derivation_path(49, 1, 0, 1, 1));
+
+
 
 //	payment_address input2 = paymentAddressForHardenedDerivationPath(privateKey, 49, 1, 0, 0, 3);
 //    ec_compressed input2_CompressedPublicKey = compressedPublicKeyForHardenedDerivationPath(privateKey, 49, 1, 0, 0, 3);
 //    script input2_P2WPKH = P2WPKHForHardenedDerivationPath(privateKey, 49, 1, 0, 1, 0);
 //    bc::wallet::hd_private input2_privateKey = indexPrivateKeyForHardenedDerivationPath(privateKey, 49, 1, 0, 0, 3);
-
-    payment_address changeAddress = paymentAddressForHardenedDerivationPath(privateKey, change_path);
 
 
     cout << "Payment Address (input1): " << input1.buildPaymentAddress() << "\n";
@@ -344,9 +357,9 @@ int main() {
     tx.set_version(1u);
     //Make Output
 
-    payment_address toAddress = wallet::payment_address("2N7WQkFtJcdvfMp4HwkoiJonvYDYjh2rAFK");
+    payment_address toAddress = wallet::payment_address("2MtCTasDMj8AADvGvviACU38B2Xw3sR4QVP");
     cout << "Payment Address (toAddress): " << toAddress << "\n";
-    uint64_t amount = 10000;
+    uint64_t amount = 60000000;
 //    btc_to_satoshi(amount, "0.0001");
 //    tx.outputs().push_back(output(amount, script(script().to_pay_script_hash_pattern(toAddress.hash()))));
 
@@ -380,9 +393,9 @@ int main() {
     chain::point_value utxo1(chain::point
                                      {
                                              hash_literal(
-                                                     "5f36bff2d7492dfc9e091468f930fccb7f14417e3daee9254fc32b92578e0440"),
+                                                     "c1977e1af3690ffb693da14e3c2ca273fb57091dfae1c876935560237bf1ddec"),
                                              0u
-                                     }, 100000);
+                                     }, 65000000);
 
 //    if(retrieved_utxo == utxo1){
 //        cout << "They are the same!\n";
@@ -420,16 +433,10 @@ int main() {
 
     createInputFrom(tx, 0, utxo1, input1);
 
-
-
-
-
-
-
 //    createInputFrom(tx, 1, utxo2, input2_CompressedPublicKey, input2_P2WPKH, input2_privateKey);
 
     if (tx.is_valid()) {
-        cout << "TX IS VALID!!!\n";
+        cout << "TX IS VALID!!!!!!!!!!!\n";
     }
 
     std::cout << encode_base16(tx.to_data(true, true)) << std::endl;
@@ -449,8 +456,7 @@ int main() {
 
 
 
+// 01000000000101ecddf17b2360559376c8e1fa1d0957fb73a22c3c4ea13d69fb0f69f31a7e97c100000000171600147cbe2f2fb7ba9cee0f58f44a43788b3da9cdd88effffffff02008793030000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d128730244c000000000017a914c8b03ea47156babe180d5e7c319867cb4ad68c39870247304402205f5aef7ccbe7c375e7262e35d7651400d74297b15e202bae415b91627a1ecdca02206b770ad5273a8ae046b7165f392e908eb8d33fe50a4fd7a5d9c32dd9659183ea0121031f00162786f395fe02bb443934edac236f4b6570ba5129b4acd684cb7208f39600000000
+// 01000000000101ecddf17b2360559376c8e1fa1d0957fb73a22c3c4ea13d69fb0f69f31a7e97c100000000171600147cbe2f2fb7ba9cee0f58f44a43788b3da9cdd88effffffff02008793030000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d128730244c000000000017a914c8b03ea47156babe180d5e7c319867cb4ad68c39870247304402205f5aef7ccbe7c375e7262e35d7651400d74297b15e202bae415b91627a1ecdca02206b770ad5273a8ae046b7165f392e908eb8d33fe50a4fd7a5d9c32dd9659183ea0121031f00162786f395fe02bb443934edac236f4b6570ba5129b4acd684cb7208f39600000000
+// 01000000000101ecddf17b2360559376c8e1fa1d0957fb73a22c3c4ea13d69fb0f69f31a7e97c100000000171600147cbe2f2fb7ba9cee0f58f44a43788b3da9cdd88effffffff02008793030000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d128730244c000000000017a914c8b03ea47156babe180d5e7c319867cb4ad68c39870247304402205f5aef7ccbe7c375e7262e35d7651400d74297b15e202bae415b91627a1ecdca02206b770ad5273a8ae046b7165f392e908eb8d33fe50a4fd7a5d9c32dd9659183ea0121031f00162786f395fe02bb443934edac236f4b6570ba5129b4acd684cb7208f39600000000
 
-//0100000000010140048e57922bc34f25e9ae3d7e41147fcbfc30f96814099efc2d49d7f2bf365f0000000017160014511ee69b10c17b0ab130a5d628378dff7cf37ba5ffffffff02102700000000000017a9149c70fb19ce7e2de4a07c716842e9bc1090a455d187803801000000000017a9148f6fcbf767432269c0145ac75f9c1fe701f099d38702483045022100ac74070ff41a834e5ca407f731c0ed19ea39356c07fd4bc4944c3dad9992b32d022043324d1fd93861258ab561f8f9e5354feb1a44507ab5d52e9715f55a742ce0530121022713623696fe288e30098bf9098bf55922e15413680b77266466dbad907ae22500000000
-
-
-//0100000000010140048e57922bc34f25e9ae3d7e41147fcbfc30f96814099efc2d49d7f2bf365f0000000017160014511ee69b10c17b0ab130a5d628378dff7cf37ba5ffffffff02102700000000000017a9149c70fb19ce7e2de4a07c716842e9bc1090a455d187803801000000000017a9148f6fcbf767432269c0145ac75f9c1fe701f099d38702483045022100ac74070ff41a834e5ca407f731c0ed19ea39356c07fd4bc4944c3dad9992b32d022043324d1fd93861258ab561f8f9e5354feb1a44507ab5d52e9715f55a742ce0530121022713623696fe288e30098bf9098bf55922e15413680b77266466dbad907ae22500000000

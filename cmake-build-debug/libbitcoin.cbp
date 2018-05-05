@@ -37,6 +37,96 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="segwit_simple_spend">
+				<Option output="/Users/jcoulter/libbitcoin/cmake-build-debug/segwit_simple_spend" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jcoulter/libbitcoin/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jcoulter/libbitcoin/builds"/>
+					<Add directory="/Users/jcoulter/libbitcoin/builds/msvc"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/math/external"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/chain"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/machine"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/wallet"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 segwit_simple_spend"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="segwit_simple_spend/fast">
+				<Option output="/Users/jcoulter/libbitcoin/cmake-build-debug/segwit_simple_spend" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jcoulter/libbitcoin/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jcoulter/libbitcoin/builds"/>
+					<Add directory="/Users/jcoulter/libbitcoin/builds/msvc"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/math/external"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/chain"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/machine"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/wallet"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 segwit_simple_spend/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="libbitcoin">
 				<Option output="/Users/jcoulter/libbitcoin/cmake-build-debug/libbitcoin" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/jcoulter/libbitcoin/cmake-build-debug"/>
@@ -133,6 +223,9 @@
 		</Unit>
 		<Unit filename="/Users/jcoulter/libbitcoin/examples/main.cpp">
 			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/examples/segwit_simple_spend.cpp">
+			<Option target="segwit_simple_spend"/>
 		</Unit>
 		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin.hpp">
 			<Option target="libbitcoin"/>

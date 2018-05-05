@@ -1,3 +1,4 @@
 /Users/jcoulter/libbitcoin/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/jcoulter/libbitcoin/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jcoulter/libbitcoin/cmake-build-debug/CMakeFiles/segwit_simple_spend.dir
 /Users/jcoulter/libbitcoin/cmake-build-debug/CMakeFiles/libbitcoin.dir

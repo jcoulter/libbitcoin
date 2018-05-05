@@ -482,3 +482,7 @@ add_executable(libbitcoin
         test/wallet/uri.cpp
         test/wallet/uri_reader.cpp
         test/main.cpp)
+
+find_package(libbitcoin)
+find_package(libbitcoin-client)
+add_executable(segwit_simple_spend examples/segwit_simple_spend.cpp)
