@@ -1,11 +1,13 @@
 #include <bitcoin/bitcoin.hpp>
 #include <bitcoin/client.hpp>
 #include <string.h>
+#include <bitcoin/bitcoin/chain/script.hpp>
 
 using namespace bc;
 using namespace bc::wallet;
 using namespace bc::machine;
 using namespace bc::chain;
+
 
 
 class derivation_path {
@@ -88,6 +90,7 @@ derivation_path::derivation_path(int purpose, int coin, int account, int change,
     this->change = change;
     this->index = index;
 }
+
 
 
 points_value getUTXOs(payment_address Addy, uint64_t amount) {
@@ -222,57 +225,6 @@ P2WPKHForHardenedDerivationPath(hd_private privateKey, derivation_path path) {
 }
 
 
-void createInputFrom(transaction &tx, int input_index, chain::point_value utxo, ec_compressed compressedPublicKey,
-                     script P2WPKH, bc::wallet::hd_private privateKey) {
-    cout << "Making input" << input_index << " \n";
-
-    //Make Input
-    input workingInput = input();
-    workingInput.set_previous_output(output_point(utxo));
-    workingInput.set_sequence(max_input_sequence);
-    tx.inputs().push_back(workingInput);
-    uint64_t previous_amount = utxo.value();
-
-
-    cout << "Making signature" << input_index << " \n";
-
-    //Make Signature
-    script script_code = script::to_pay_key_hash_pattern(bitcoin_short_hash(compressedPublicKey));
-    endorsement sig;
-    script().create_endorsement(sig, privateKey.secret(), script_code, tx,
-                                tx.inputs()[input_index].previous_output().index(), sighash_algorithm::all,
-                                script_version::zero, previous_amount);
-
-    cout << "Making Witness" << input_index << " \n";
-
-    //Make Witness
-    data_stack witness_data{to_chunk(sig), to_chunk(compressedPublicKey)};
-    tx.inputs()[input_index].set_witness(witness(witness_data));
-
-    cout << "Making input script" << input_index << " \n";
-
-    //set input script
-    data_chunk scriptChunk = to_chunk(P2WPKH.to_data(1));
-    tx.inputs()[input_index].set_script(script(scriptChunk, false));
-
-    std::cout << "input [" << input_index << "] P2SH Script: " << tx.inputs()[input_index].script().to_string(0)
-              << std::endl;
-
-}
-
-void createPayToScriptOutputFrom(transaction &tx, payment_address address, uint64_t amount) {
-    tx.outputs().push_back(output(amount, script(script().to_pay_script_hash_pattern(address.hash()))));
-}
-
-void createPayToKeyOutputFrom(transaction &tx, payment_address address, uint64_t amount) {
-    tx.outputs().push_back(output(amount, script(script().to_pay_key_hash_pattern(address.hash()))));
-}
-
-
-//payment_address
-//ec_compressed public
-//p2wpkh
-//hd_private
 
 class usable_address {
 public:
@@ -300,6 +252,60 @@ usable_address::usable_address(hd_private privateKey, derivation_path path) {
 }
 
 
+
+void createInputFrom(transaction &tx, int input_index, chain::point_value utxo, usable_address usableAddress) {
+    cout << "Making input" << input_index << " \n";
+
+    //Make Input
+    input workingInput = input();
+    workingInput.set_previous_output(output_point(utxo));
+    workingInput.set_sequence(max_input_sequence);
+    tx.inputs().push_back(workingInput);
+    uint64_t previous_amount = utxo.value();
+
+
+    cout << "Making signature" << input_index << " \n";
+
+    //Make Signature
+    script script_code = script::to_pay_key_hash_pattern(bitcoin_short_hash(usableAddress.buildCompressedPublicKey()));
+    endorsement sig;
+    script().create_endorsement(sig, usableAddress.buildPrivateKey().secret(), script_code, tx,
+                                tx.inputs()[input_index].previous_output().index(), sighash_algorithm::all,
+                                script_version::zero, previous_amount);
+
+    cout << "Making Witness" << input_index << " \n";
+
+    //Make Witness
+    data_stack witness_data{to_chunk(sig), to_chunk(usableAddress.buildCompressedPublicKey())};
+    tx.inputs()[input_index].set_witness(witness(witness_data));
+
+    cout << "Making input script" << input_index << " \n";
+
+    //set input script
+    data_chunk scriptChunk = to_chunk(usableAddress.buildP2WPKH().to_data(1));
+    tx.inputs()[input_index].set_script(script(scriptChunk, false));
+
+    std::cout << "input [" << input_index << "] P2SH Script: " << tx.inputs()[input_index].script().to_string(0)
+              << std::endl;
+
+}
+
+void createPayToScriptOutputFrom(transaction &tx, payment_address address, uint64_t amount) {
+    tx.outputs().push_back(output(amount, script(script().to_pay_script_hash_pattern(address.hash()))));
+}
+
+void createPayToKeyOutputFrom(transaction &tx, payment_address address, uint64_t amount) {
+    tx.outputs().push_back(output(amount, script(script().to_pay_key_hash_pattern(address.hash()))));
+}
+
+
+//payment_address
+//ec_compressed public
+//p2wpkh
+//hd_private
+
+
+
 int main() {
 
     // hd_private privateKey = getPrivateKey("retire detect ceiling lab labor approve busy easy swing adjust dumb north");
@@ -310,12 +316,12 @@ int main() {
     derivation_path change_path(49, 1, 0, 1, 0);
 
 
-    usable_address input1_address(privateKey, input1_path);
+    usable_address input1(privateKey, input1_path);
+    usable_address change(privateKey, change_path);
 
-    payment_address input1 = paymentAddressForHardenedDerivationPath(privateKey, input1_path);
-    ec_compressed input1_CompressedPublicKey = compressedPublicKeyForHardenedDerivationPath(privateKey, input1_path);
-    script input1_P2WPKH = P2WPKHForHardenedDerivationPath(privateKey, input1_path);
-    bc::wallet::hd_private input1_privateKey = indexPrivateKeyForHardenedDerivationPath(privateKey, input1_path);
+//    ec_compressed input1_CompressedPublicKey = input1.buildCompressedPublicKey();
+//    script input1_P2WPKH = input1.buildP2WPKH();
+//    bc::wallet::hd_private input1_privateKey = input1.buildPrivateKey();
 
 //	payment_address input2 = paymentAddressForHardenedDerivationPath(privateKey, 49, 1, 0, 0, 3);
 //    ec_compressed input2_CompressedPublicKey = compressedPublicKeyForHardenedDerivationPath(privateKey, 49, 1, 0, 0, 3);
@@ -325,9 +331,9 @@ int main() {
     payment_address changeAddress = paymentAddressForHardenedDerivationPath(privateKey, change_path);
 
 
-    cout << "Payment Address (input1): " << input1 << "\n";
+    cout << "Payment Address (input1): " << input1.buildPaymentAddress() << "\n";
 //	cout << "Payment Address (input2): " << input2 << "\n";
-    cout << "Payment Address (changeAddress): " << changeAddress << "\n";
+    cout << "Payment Address (changeAddress): " << change.buildPaymentAddress() << "\n";
 
     cout << "ec_private::testnet: " << ec_private::testnet << "\n";
 
@@ -395,16 +401,16 @@ int main() {
 
 
 
-    uint64_t change = utxo1.value() - amount - 10000;
-//	uint64_t change = utxo2.value()  - amount - 10000;
-//	uint64_t change = utxo1.value() + utxo2.value() - amount - 10000;
+    uint64_t change_amount = utxo1.value() - amount - 10000;
+//	uint64_t change_amount = utxo2.value()  - amount - 10000;
+//	uint64_t change_amount = utxo1.value() + utxo2.value() - amount - 10000;
 
-    cout << "Change: " << change << "\n";
+    cout << "Change: " << change_amount << "\n";
 
 //	script outScript = script(script().to_pay_script_hash_pattern(changeAddress.hash()));
 //	tx.outputs().push_back(output(change, outScript));
 
-    createPayToScriptOutputFrom(tx, changeAddress, change);
+    createPayToScriptOutputFrom(tx, change.buildPaymentAddress(), change_amount);
 
     std::cout << "output [1] P2SH Script: " << tx.outputs()[1].script().to_string(0) << std::endl;
 
@@ -412,7 +418,7 @@ int main() {
     cout << "about to create inputs from utxo's\n";
 
 
-    createInputFrom(tx, 0, utxo1, input1_CompressedPublicKey, input1_P2WPKH, input1_privateKey);
+    createInputFrom(tx, 0, utxo1, input1);
 
 
 
@@ -434,7 +440,8 @@ int main() {
 //	broadcastTX(tx);
 //
 //	build
-//	//g++ -std=c++11 -o spend segwit_spend.cpp $(pkg-config --cflags libbitcoin --libs libbitcoin libbitcoin-client)
+// g++ -std=c++11 -o spend_simple segwit_simple_spend.cpp $(pkg-config --cflags libbitcoin --libs libbitcoin libbitcoin-client)
+
 }
 
 
