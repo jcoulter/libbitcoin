@@ -278,7 +278,7 @@ void signForInput(transaction &tx, int input_index, chain::point_value utxo, usa
     // the sig and the compressed public key build into the witness. it looks like compressed key is good but sig changes...
 //    cout << "tx.inputs()[input_index].previous_output().index() " << tx.inputs()[input_index].previous_output().index() << "\n";
     script().create_endorsement(sig, usableAddress.buildPrivateKey().secret(), script_code, tx,
-                                tx.inputs()[input_index].previous_output().index(), sighash_algorithm::all,
+                                input_index, sighash_algorithm::all,
                                 script_version::zero, previous_amount);
 
 //    std::cout << "sig [" << input_index << "] : " << sig.to_string(0)
@@ -459,3 +459,6 @@ int main() {
 
 // Here it is signing two inputs last
 // 010000000001029f42871e31524b3fe4d19cfe9ec722ef3eed739eea11bd12bf20c7e82393e2d40000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff926a7f85d5b165ff49914cdad7664883f095797d565b01da346ef3ef3409a9740000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff02a0c44a000000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d1287b01d84030000000017a9146378fa401dd34160e17021989bd913d940f26ffc8702483045022100fcf4cc0f4ff09f6c27d500be241eecb97efaaa21e973378037d0dc2599385b5b02203a845511ea7a35bae0d0e8ca8996e25bb256b2c7ddd5fc77d8b4080716f3fb4d0121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b02473044022011dc96b8840026d4eddb72e0af77438708ab1ffb9de246436d80feb1be5e52630220109c9faf0fb68b1e2bfdcfcec9b21523332ba4ff317a369f2aefdbaa96f356fb0121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b00000000
+
+// Here it is signing using the current input index rather than the previous utxo index:
+// 010000000001029f42871e31524b3fe4d19cfe9ec722ef3eed739eea11bd12bf20c7e82393e2d40000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff926a7f85d5b165ff49914cdad7664883f095797d565b01da346ef3ef3409a9740000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff02a0c44a000000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d1287b01d84030000000017a9146378fa401dd34160e17021989bd913d940f26ffc8702483045022100fcf4cc0f4ff09f6c27d500be241eecb97efaaa21e973378037d0dc2599385b5b02203a845511ea7a35bae0d0e8ca8996e25bb256b2c7ddd5fc77d8b4080716f3fb4d0121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b02483045022100c6d1840444adfff22312d182966a5a4206d9c54d81f05272bc6fece064dad55b022062800d063ccc8c1b53f025f2ea915d0647763b0d93d1332eeb38c1c979c05f2c0121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b00000000

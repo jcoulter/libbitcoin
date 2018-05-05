@@ -30,23 +30,50 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/examples/main.cpp">
+          <file leaf-file-name="segwit_simple_spend.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="555">
-                  <caret line="37" selection-start-line="37" selection-end-line="37" />
+                <state relative-caret-position="240">
+                  <caret line="429" column="2" lean-forward="true" selection-start-line="429" selection-start-column="2" selection-end-line="429" selection-end-column="2" />
+                  <folding>
+                    <element signature="e#0#30#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="segwit_simple_spend.cpp" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
+          <file leaf-file-name="sighash_algorithm.hpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/machine/sighash_algorithm.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1050">
-                  <caret line="375" selection-start-line="375" selection-end-line="375" />
-                  <folding>
-                    <element signature="e#0#30#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="124">
+                  <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="script.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test/chain/script.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="711" column="38" selection-start-line="711" selection-start-column="26" selection-end-line="711" selection-end-column="44" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="script.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/chain/script.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="181">
+                  <caret line="840" column="25" selection-start-line="840" selection-start-column="25" selection-end-line="840" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="script.hpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/chain/script.hpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="241">
+                  <caret line="145" column="15" selection-start-line="145" selection-start-column="15" selection-end-line="145" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -72,8 +99,8 @@
           <file leaf-file-name="elliptic_curve.hpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/math/elliptic_curve.hpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="275">
-                  <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="58" lean-forward="true" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="59" />
                 </state>
               </provider>
             </entry>
@@ -90,15 +117,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4286">
-                  <caret line="487" column="19" selection-start-line="487" selection-start-column="19" selection-end-line="487" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -106,8 +124,8 @@
           <file leaf-file-name="p2w_examples.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/examples/p2w_examples.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="22" column="10" selection-start-line="22" selection-end-line="22" selection-end-column="10" />
+                <state relative-caret-position="165">
+                  <caret line="328" column="30" selection-start-line="328" selection-start-column="12" selection-end-line="328" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -130,8 +148,11 @@
       <find>push_size_0</find>
       <find>input_amount</find>
       <find>indexPrivateKeyForHardenedDerivationPath</find>
-      <find>witnessProgram</find>
       <find>paymentAddressForCompressedPubKey</find>
+      <find>tx.inputs()[input_index]</find>
+      <find>witnessProgram</find>
+      <find>create_endorsement</find>
+      <find>utxo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,6 +163,7 @@
       <list>
         <option value="$PROJECT_DIR$/segwit_simple_spend.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/bitcoin/bitcoin/chain/script.hpp" />
         <option value="$PROJECT_DIR$/examples/p2w_examples.cpp" />
         <option value="$PROJECT_DIR$/examples/segwit_simple_spend.cpp" />
       </list>
@@ -192,7 +214,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ec_private&#9;null&#9;null&#10;cmake&#9;FILE&#9;file:///Users/jcoulter/libbitcoin/CMakeLists.txt&#10;libb&#9;FILE&#9;file:///Users/jcoulter/libbitcoin/examples/.libs/libbitcoin-examples&#10;example&#9;FILE&#9;file:///Users/jcoulter/libbitcoin/examples/libbitcoin-examples" />
+    <property name="SearchEverywhereHistoryKey" value="sighash_algorithm&#9;null&#9;null&#10;simpl&#9;FILE&#9;file:///Users/jcoulter/libbitcoin/examples/segwit_simple_spend.cpp&#10;create_endorsement&#9;null&#9;null&#10;ec_private&#9;null&#9;null&#10;cmake&#9;FILE&#9;file:///Users/jcoulter/libbitcoin/CMakeLists.txt&#10;libb&#9;FILE&#9;file:///Users/jcoulter/libbitcoin/examples/.libs/libbitcoin-examples&#10;example&#9;FILE&#9;file:///Users/jcoulter/libbitcoin/examples/libbitcoin-examples" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -241,12 +263,12 @@
       <updated>1525193644735</updated>
       <workItem from="1525193647875" duration="1345000" />
       <workItem from="1525478651281" duration="1841000" />
-      <workItem from="1525481455985" duration="8299000" />
+      <workItem from="1525481455985" duration="12302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11485000" />
+    <option name="totallyTimeSpent" value="15488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -306,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4286">
@@ -326,13 +341,6 @@
     <entry file="file://$PROJECT_DIR$/examples/libbitcoin-examples">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2415" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/math/elliptic_curve.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/wallet/ec_private.hpp">
@@ -356,13 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/p2w_examples.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="10" selection-start-line="22" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/wallet/payment_address.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -370,10 +371,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/chain/script.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="711" column="38" selection-start-line="711" selection-start-column="26" selection-end-line="711" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chain/script.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="840" column="25" selection-start-line="840" selection-start-column="25" selection-end-line="840" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/chain/script.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="145" column="15" selection-start-line="145" selection-start-column="15" selection-end-line="145" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/math/elliptic_curve.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="58" lean-forward="true" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/machine/sighash_algorithm.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/p2w_examples.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="328" column="30" selection-start-line="328" selection-start-column="12" selection-end-line="328" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="375" selection-start-line="375" selection-end-line="375" />
+        <state relative-caret-position="240">
+          <caret line="429" column="2" lean-forward="true" selection-start-line="429" selection-start-column="2" selection-end-line="429" selection-end-column="2" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
