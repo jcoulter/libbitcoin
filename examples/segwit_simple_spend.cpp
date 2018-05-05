@@ -254,28 +254,37 @@ usable_address::usable_address(hd_private privateKey, derivation_path path) {
 void createInputFrom(transaction &tx, int input_index, chain::point_value utxo, usable_address usableAddress) {
     cout << "Making input" << input_index << " \n";
 
-
     //Make Input
     input workingInput = input();
     workingInput.set_previous_output(output_point(utxo));
     workingInput.set_sequence(max_input_sequence);
     tx.inputs().push_back(workingInput);
+
+
+
+
+}
+
+void signForInput(transaction &tx, int input_index, chain::point_value utxo, usable_address usableAddress) {
     uint64_t previous_amount = utxo.value();
 
 
     cout << "Making signature" << input_index << " \n";
-
-//    todo: this matches example
     //Make Signature
     script script_code = script::to_pay_key_hash_pattern(bitcoin_short_hash(usableAddress.buildCompressedPublicKey()));
     endorsement sig;
 
-    cout << "tx.inputs()[input_index].previous_output().index() " << tx.inputs()[input_index].previous_output().index() << "\n";
+
+    // the sig and the compressed public key build into the witness. it looks like compressed key is good but sig changes...
+//    cout << "tx.inputs()[input_index].previous_output().index() " << tx.inputs()[input_index].previous_output().index() << "\n";
     script().create_endorsement(sig, usableAddress.buildPrivateKey().secret(), script_code, tx,
                                 tx.inputs()[input_index].previous_output().index(), sighash_algorithm::all,
                                 script_version::zero, previous_amount);
 
-    cout << "Making input script" << input_index << " \n";
+//    std::cout << "sig [" << input_index << "] : " << sig.to_string(0)
+//              << std::endl;
+//
+//    cout << "Making input script" << input_index << " \n";
 
     //set input script
     data_chunk scriptChunk = to_chunk(usableAddress.buildP2WPKH().to_data(true));
@@ -291,8 +300,10 @@ void createInputFrom(transaction &tx, int input_index, chain::point_value utxo, 
     data_stack witness_data{sig, to_chunk(usableAddress.buildCompressedPublicKey())};
 //    data_stack witness_data{to_chunk(sig), to_chunk(usableAddress.buildCompressedPublicKey())};
     tx.inputs()[input_index].set_witness(witness(witness_data));
-
 }
+
+
+
 
 void createPayToScriptOutputFrom(transaction &tx, payment_address address, uint64_t amount) {
     tx.outputs().push_back(output(amount, script(script().to_pay_script_hash_pattern(address.hash()))));
@@ -396,9 +407,15 @@ int main() {
 
 
     createInputFrom(tx, 0, utxo1, input1);
+
     createInputFrom(tx, 1, utxo2, input1);
 
-//    createInputFrom(tx, 1, utxo2, input2_CompressedPublicKey, input2_P2WPKH, input2_privateKey);
+
+//    MUST SIGN LAST!!!
+    signForInput(tx, 0, utxo1, input1);
+    signForInput(tx, 1, utxo2, input1);
+
+
 
     if (tx.is_valid()) {
         cout << "TX IS VALID!!!!!!!!!!!\n";
@@ -436,3 +453,9 @@ int main() {
 
 // attempt to spend from 2 0-indexed utxos from the same receive address
 // 010000000001029f42871e31524b3fe4d19cfe9ec722ef3eed739eea11bd12bf20c7e82393e2d40000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff926a7f85d5b165ff49914cdad7664883f095797d565b01da346ef3ef3409a9740000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff02a0c44a000000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d1287b01d84030000000017a9146378fa401dd34160e17021989bd913d940f26ffc8702483045022100f66d7e0a2be57ef7071a930ec8208fec0841c741c6ec0b96039d21e11427aca202206d79223d6900ba6703081633ede5c65ad7caee43fc6a0cd83838bcc7b3d115c90121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b0247304402204abf1db57e657860d565552939f4d638e2e25b0be002d7a6718ac8c35453e753022038447edd64c87a7ff919837871d3392a28fc5e20f1d60ac97724f658d67c288f0121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b00000000
+
+// that failed. Here it is with just utxo1:  THE WITNESS IS DIFFERENT!
+// 010000000001019f42871e31524b3fe4d19cfe9ec722ef3eed739eea11bd12bf20c7e82393e2d40000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff02a0c44a000000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d1287f0d8ffffffffffff17a9146378fa401dd34160e17021989bd913d940f26ffc870247304402205bf3f18466d3aebbedc1b8296f594b918df5164cad7e709364388979e89f32d00220364e0a393387d9114cbfb3c73eee110d9caf7b2f93de044aa5b2ed4c56812ee70121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b00000000
+
+// Here it is signing two inputs last
+// 010000000001029f42871e31524b3fe4d19cfe9ec722ef3eed739eea11bd12bf20c7e82393e2d40000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff926a7f85d5b165ff49914cdad7664883f095797d565b01da346ef3ef3409a9740000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff02a0c44a000000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d1287b01d84030000000017a9146378fa401dd34160e17021989bd913d940f26ffc8702483045022100fcf4cc0f4ff09f6c27d500be241eecb97efaaa21e973378037d0dc2599385b5b02203a845511ea7a35bae0d0e8ca8996e25bb256b2c7ddd5fc77d8b4080716f3fb4d0121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b02473044022011dc96b8840026d4eddb72e0af77438708ab1ffb9de246436d80feb1be5e52630220109c9faf0fb68b1e2bfdcfcec9b21523332ba4ff317a369f2aefdbaa96f356fb0121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b00000000
