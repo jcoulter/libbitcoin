@@ -1,6 +1,7 @@
 #include <bitcoin/bitcoin.hpp>
 #include <bitcoin/client.hpp>
 #include <string.h>
+#include <bitcoin/bitcoin/chain/script.hpp>
 
 
 using namespace bc;
@@ -185,33 +186,20 @@ bc::wallet::hd_private childPrivateKey(bc::wallet::hd_private privKey, int index
 }
 
 
-bc::wallet::hd_private
-indexPrivateKeyForHardenedDerivationPath(hd_private privateKey, derivation_path path) {
-//
-//    auto hardenedOffset = bc::wallet::hd_first_hardened_key;
-//    int hardenedPurposeIndex = (int) (purpose + hardenedOffset);
-//    int hardenedCoinIndex = (int) (coin + hardenedOffset);
-//    int hardenedAccountIndex = (int) (account + hardenedOffset);
-//    int changeIndex = (int) (change);
-//    int indexIndex = (int) (index);
+bc::wallet::hd_private indexPrivateKeyForHardenedDerivationPath(hd_private privateKey, derivation_path path) {
 
-    // 2. generate keys
     bc::wallet::hd_private purposePrivateKey = childPrivateKey(privateKey, path.getHardenedPurpose());
-
     bc::wallet::hd_private coinPrivateKey = childPrivateKey(purposePrivateKey, path.getHardenedCoin());
-
     bc::wallet::hd_private accountPrivateKey = childPrivateKey(coinPrivateKey, path.getHardenedAccount());
-
     bc::wallet::hd_private changePrivateKey = childPrivateKey(accountPrivateKey, path.getChange());
-
     return childPrivateKey(changePrivateKey, path.getIndex());
 }
 
+
+//TODO: what is going on here between the p2wpkh and the p2sh?
 payment_address paymentAddressForCompressedPubKey(ec_compressed compressedPublicKey, script P2WPKH) {
-    // script P2WPKH = script(witnessProgram(compressedPublicKey));
     short_hash WitnessProgramHash = bitcoin_short_hash(P2WPKH.to_data(0));
-    payment_address fromAddress = payment_address(P2WPKH, payment_address::testnet_p2sh);
-    return fromAddress;
+    return payment_address(P2WPKH, payment_address::testnet_p2sh);
 }
 
 ec_compressed compressedPublicKeyForHardenedDerivationPath(hd_private privateKey, derivation_path path) {
@@ -328,9 +316,6 @@ int main() {
 //    hd_private privateKey = getPrivateKey("sad post like task render prefer attitude advice hazard cruel guitar coral");
 	hd_private privateKey = getPrivateKey("company rail code drop garlic weird enable month lyrics faint educate pilot marine orphan boat");
 
-//    derivation_path input1_path(49, 1, 0, 0, 0);
-//    derivation_path change_path(49, 1, 0, 1, 0);
-
 
     usable_address input1(privateKey, derivation_path(49, 1, 0, 1, 1));
 
@@ -367,35 +352,14 @@ int main() {
 
     std::cout << "output [0] P2SH Script: " << tx.outputs()[0].script().to_string(0) << std::endl;
 
-    //Make Change
-//  std::cout << "from address: " << fromAddress.encoded() << std::endl;
-//  hd_private nextIndexPrivateKey = childPrivateKey(receiveChangePrivateKey, 0);
-//  ec_compressed compressedChangePublicKey = nextIndexPrivateKey.to_public().point();
-//  script changeP2WPKH = script(witnessProgram(compressedChangePublicKey));
-//  payment_address changeAddress = paymentAddressForCompressedPubKey(compressedChangePublicKey, changeP2WPKH);
-//  std::cout << "change address: " << changeAddress.encoded() << std::endl;
-
-
-
-//    points_value UTXOs = getUTXOs(input1, amount);
-
-//    cout << "UTXOs value: " << UTXOs.value() << "\n";
-//    cout << "UTXOs points[0].value: " << UTXOs.points[0].value() << "\n";
-//    cout << "UTXOs points[0].index : " << UTXOs.points[0].index() << "\n";
-//    cout << "UTXOs points[0].hash: " << UTXOs.points[0].hash() << "\n";
-
-
-
-//    chain::point_value retrieved_utxo = UTXOs.points[0];
-
 
 
     chain::point_value utxo1(chain::point
                                      {
                                              hash_literal(
-                                                     "6519265072e7ee209321f11587fa598bfaf60b429e9dfd7a9efa2b5ccad29ea3"),
-                                             1u
-                                     }, 4990000);
+                                                     "ddf08f3ec0c864094564703e4c8d95278a3f56e5fb5cf24283c4371157666242"),
+                                             0u
+                                     }, 65000000);
 
 //    if(retrieved_utxo == utxo1){
 //        cout << "They are the same!\n";

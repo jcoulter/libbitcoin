@@ -13,6 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf698b1c-92f7-4365-bb75-89ac1ec351fb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/segwit_simple_spend.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/segwit_simple_spend.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/spend_simple" beforeDir="false" afterPath="$PROJECT_DIR$/examples/spend_simple" afterDir="false" />
     </list>
@@ -41,11 +42,20 @@
           <file leaf-file-name="segwit_simple_spend.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="298">
-                  <caret line="396" column="46" selection-start-line="396" selection-start-column="46" selection-end-line="396" selection-end-column="46" />
+                <state relative-caret-position="1050">
+                  <caret line="375" selection-start-line="375" selection-end-line="375" />
                   <folding>
                     <element signature="e#0#30#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="payment_address.hpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/wallet/payment_address.hpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="181">
+                  <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -96,8 +106,8 @@
           <file leaf-file-name="p2w_examples.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/examples/p2w_examples.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="164">
-                  <caret line="362" column="48" lean-forward="true" selection-start-line="362" selection-start-column="48" selection-end-line="362" selection-end-column="48" />
+                <state relative-caret-position="300">
+                  <caret line="22" column="10" selection-start-line="22" selection-end-line="22" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -118,6 +128,10 @@
       <find>max_</find>
       <find>transaction</find>
       <find>push_size_0</find>
+      <find>input_amount</find>
+      <find>indexPrivateKeyForHardenedDerivationPath</find>
+      <find>witnessProgram</find>
+      <find>paymentAddressForCompressedPubKey</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -227,12 +241,12 @@
       <updated>1525193644735</updated>
       <workItem from="1525193647875" duration="1345000" />
       <workItem from="1525478651281" duration="1841000" />
-      <workItem from="1525481455985" duration="7188000" />
+      <workItem from="1525481455985" duration="8299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10374000" />
+    <option name="totallyTimeSpent" value="11485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -344,15 +358,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/p2w_examples.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="362" column="48" lean-forward="true" selection-start-line="362" selection-start-column="48" selection-end-line="362" selection-end-column="48" />
+        <state relative-caret-position="300">
+          <caret line="22" column="10" selection-start-line="22" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/bitcoin/bitcoin/wallet/payment_address.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="396" column="46" selection-start-line="396" selection-start-column="46" selection-end-line="396" selection-end-column="46" />
+        <state relative-caret-position="1050">
+          <caret line="375" selection-start-line="375" selection-end-line="375" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
