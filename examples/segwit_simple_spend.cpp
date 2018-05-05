@@ -332,7 +332,7 @@ int main() {
 //    derivation_path change_path(49, 1, 0, 1, 0);
 
 
-    usable_address input1(privateKey, derivation_path(49, 1, 0, 0, 3));
+    usable_address input1(privateKey, derivation_path(49, 1, 0, 1, 1));
 
     usable_address change(privateKey, derivation_path(49, 1, 0, 1, 2));
 
@@ -359,7 +359,7 @@ int main() {
 
     payment_address toAddress = wallet::payment_address("2MwvupoANz9CnG7xJJ3FDeZ3dZ1VmJWS9kE");
     cout << "Payment Address (toAddress): " << toAddress << "\n";
-    uint64_t amount = 59000000;
+    uint64_t amount = 4900000;
 //    btc_to_satoshi(amount, "0.0001");
 //    tx.outputs().push_back(output(amount, script(script().to_pay_script_hash_pattern(toAddress.hash()))));
 
@@ -394,8 +394,8 @@ int main() {
                                      {
                                              hash_literal(
                                                      "6519265072e7ee209321f11587fa598bfaf60b429e9dfd7a9efa2b5ccad29ea3"),
-                                             0u
-                                     }, 60000000);
+                                             1u
+                                     }, 4990000);
 
 //    if(retrieved_utxo == utxo1){
 //        cout << "They are the same!\n";
@@ -462,3 +462,6 @@ int main() {
 
 
 // 01000000000101a39ed2ca5c2bfa9e7afd9d9e420bf6fa8b59fa8715f1219320eee772502619650000000017160014232b0a07cb7d6f7ed8ad58eb75a948a7bb884780ffffffff02c04484030000000017a9143361fabb3a1d7367d5664e41870bf86aa074e22d87301b0f000000000017a9146378fa401dd34160e17021989bd913d940f26ffc870247304402202f7b320df875b3206d431e4e7b4edecb5fcc64b75a4b97183cf6591d9b56a86a02201291917f9225ee0670c52916a8cff17fcdc97904ed4f7f12ead73db50565f26e0121035829a0fbcfbf02a179cdce0b5544ab8166337e0b96d963bb3bd14c0f4ceb1a6a00000000
+
+
+// 01000000000101a39ed2ca5c2bfa9e7afd9d9e420bf6fa8b59fa8715f1219320eee7725026196501000000171600142154370d86a72201646e04fc1d4747bf8bb695c8ffffffff02a0c44a000000000017a9143361fabb3a1d7367d5664e41870bf86aa074e22d87803801000000000017a9146378fa401dd34160e17021989bd913d940f26ffc8702483045022100fdfe4f97efa6df3cfdf044997bca62f96fc00b780652759b5da4d8255998877902205149c9a8752a25def2f08286ec284e1c5020dd1a69512840c85b6898ab3ca279012103d91c31cd2bd7dd1fbc848af892f1df0fae15552788873a2d00b069abc200c4b900000000

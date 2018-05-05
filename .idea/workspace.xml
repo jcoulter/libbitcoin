@@ -41,8 +41,8 @@
           <file leaf-file-name="segwit_simple_spend.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1695">
-                  <caret line="447" column="2" lean-forward="true" selection-start-line="447" selection-start-column="2" selection-end-line="447" selection-end-column="2" />
+                <state relative-caret-position="298">
+                  <caret line="396" column="46" selection-start-line="396" selection-start-column="46" selection-end-line="396" selection-end-column="46" />
                   <folding>
                     <element signature="e#0#30#0" expanded="true" />
                   </folding>
@@ -227,12 +227,12 @@
       <updated>1525193644735</updated>
       <workItem from="1525193647875" duration="1345000" />
       <workItem from="1525478651281" duration="1841000" />
-      <workItem from="1525481455985" duration="6914000" />
+      <workItem from="1525481455985" duration="7188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10100000" />
+    <option name="totallyTimeSpent" value="10374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -351,8 +351,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="447" column="2" lean-forward="true" selection-start-line="447" selection-start-column="2" selection-end-line="447" selection-end-column="2" />
+        <state relative-caret-position="298">
+          <caret line="396" column="46" selection-start-line="396" selection-start-column="46" selection-end-line="396" selection-end-column="46" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
