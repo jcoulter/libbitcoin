@@ -317,7 +317,7 @@ int main() {
 	hd_private privateKey = getPrivateKey("company rail code drop garlic weird enable month lyrics faint educate pilot marine orphan boat");
 
 
-    usable_address input1(privateKey, derivation_path(49, 1, 0, 1, 1));
+    usable_address input1(privateKey, derivation_path(49, 1, 0, 0, 4));
 
     usable_address change(privateKey, derivation_path(49, 1, 0, 1, 2));
 
@@ -342,7 +342,7 @@ int main() {
     tx.set_version(1u);
     //Make Output
 
-    payment_address toAddress = wallet::payment_address("2MwvupoANz9CnG7xJJ3FDeZ3dZ1VmJWS9kE");
+    payment_address toAddress = wallet::payment_address("2MtCTasDMj8AADvGvviACU38B2Xw3sR4QVP");
     cout << "Payment Address (toAddress): " << toAddress << "\n";
     uint64_t amount = 4900000;
 //    btc_to_satoshi(amount, "0.0001");
@@ -355,11 +355,11 @@ int main() {
 
 
     chain::point_value utxo1(chain::point
-                                     {
-                                             hash_literal(
-                                                     "ddf08f3ec0c864094564703e4c8d95278a3f56e5fb5cf24283c4371157666242"),
-                                             0u
-                                     }, 65000000);
+     {
+             hash_literal(
+                     "d4e29323e8c720bf12bd11ea9e73ed3eef22c79efe9cd1e43f4b52311e87429f"),
+             0u
+     }, 4900000);
 
 //    if(retrieved_utxo == utxo1){
 //        cout << "They are the same!\n";
@@ -367,20 +367,20 @@ int main() {
 
 //    cout << "UTXO:  " << " Index: " << utxo1.index() << "\n";
 
-//    chain::point_value utxo2(chain::point
-//    {
-//        hash_literal("c7c0d4e3ed1fdb0a05b622a7fe16d1067a51190a88823c70df107c678d8deba8"),
-//                0u
-//    }, 16250000);
+    chain::point_value utxo2(chain::point
+    {
+        hash_literal("74a90934eff36e34da015b567d7995f0834866d7da4c9149ff65b1d5857f6a92"),
+                0u
+    }, 59000000);
 
 
 
 
 
 
-    uint64_t change_amount = utxo1.value() - amount - 10000;
+//    uint64_t change_amount = utxo1.value() - amount - 10000;
 //	uint64_t change_amount = utxo2.value()  - amount - 10000;
-//	uint64_t change_amount = utxo1.value() + utxo2.value() - amount - 10000;
+	uint64_t change_amount = utxo1.value() + utxo2.value() - amount - 10000;
 
     cout << "Change: " << change_amount << "\n";
 
@@ -396,6 +396,7 @@ int main() {
 
 
     createInputFrom(tx, 0, utxo1, input1);
+    createInputFrom(tx, 1, utxo2, input1);
 
 //    createInputFrom(tx, 1, utxo2, input2_CompressedPublicKey, input2_P2WPKH, input2_privateKey);
 
@@ -427,5 +428,11 @@ int main() {
 
 // 01000000000101a39ed2ca5c2bfa9e7afd9d9e420bf6fa8b59fa8715f1219320eee772502619650000000017160014232b0a07cb7d6f7ed8ad58eb75a948a7bb884780ffffffff02c04484030000000017a9143361fabb3a1d7367d5664e41870bf86aa074e22d87301b0f000000000017a9146378fa401dd34160e17021989bd913d940f26ffc870247304402202f7b320df875b3206d431e4e7b4edecb5fcc64b75a4b97183cf6591d9b56a86a02201291917f9225ee0670c52916a8cff17fcdc97904ed4f7f12ead73db50565f26e0121035829a0fbcfbf02a179cdce0b5544ab8166337e0b96d963bb3bd14c0f4ceb1a6a00000000
 
-
+//failed send from change
 // 01000000000101a39ed2ca5c2bfa9e7afd9d9e420bf6fa8b59fa8715f1219320eee7725026196501000000171600142154370d86a72201646e04fc1d4747bf8bb695c8ffffffff02a0c44a000000000017a9143361fabb3a1d7367d5664e41870bf86aa074e22d87803801000000000017a9146378fa401dd34160e17021989bd913d940f26ffc8702483045022100fdfe4f97efa6df3cfdf044997bca62f96fc00b780652759b5da4d8255998877902205149c9a8752a25def2f08286ec284e1c5020dd1a69512840c85b6898ab3ca279012103d91c31cd2bd7dd1fbc848af892f1df0fae15552788873a2d00b069abc200c4b900000000
+
+// attempt to send funds from faucet -> change address - sent successfully
+// 01000000000101426266571137c48342f25cfbe5563f8a27958d4c3e7064450964c8c03e8ff0dd00000000171600142154370d86a72201646e04fc1d4747bf8bb695c8ffffffff02a0c44a000000000017a9143361fabb3a1d7367d5664e41870bf86aa074e22d8790e694030000000017a9146378fa401dd34160e17021989bd913d940f26ffc870247304402205659f1a684023aeb24954033963bdebec0683786e1be6e30758705b1f944a40102200a28010fe57ca9b61cccd446959d0333f00982757e9eabfc179f171dbb9728d7012103d91c31cd2bd7dd1fbc848af892f1df0fae15552788873a2d00b069abc200c4b900000000
+
+// attempt to spend from 2 0-indexed utxos from the same receive address
+// 010000000001029f42871e31524b3fe4d19cfe9ec722ef3eed739eea11bd12bf20c7e82393e2d40000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff926a7f85d5b165ff49914cdad7664883f095797d565b01da346ef3ef3409a9740000000017160014cd09965a3a206c1c0ffad854bc47f0e32071f941ffffffff02a0c44a000000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d1287b01d84030000000017a9146378fa401dd34160e17021989bd913d940f26ffc8702483045022100f66d7e0a2be57ef7071a930ec8208fec0841c741c6ec0b96039d21e11427aca202206d79223d6900ba6703081633ede5c65ad7caee43fc6a0cd83838bcc7b3d115c90121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b0247304402204abf1db57e657860d565552939f4d638e2e25b0be002d7a6718ac8c35453e753022038447edd64c87a7ff919837871d3392a28fc5e20f1d60ac97724f658d67c288f0121022cbcc7095b46aeb979b8770a12725c5fbb209c97e8f1f66b6681b6ded38d094b00000000
