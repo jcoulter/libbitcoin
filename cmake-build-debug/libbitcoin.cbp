@@ -1,0 +1,1497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="libbitcoin"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/jcoulter/libbitcoin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/jcoulter/libbitcoin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/jcoulter/libbitcoin/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="libbitcoin">
+				<Option output="/Users/jcoulter/libbitcoin/cmake-build-debug/libbitcoin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jcoulter/libbitcoin/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jcoulter/libbitcoin/builds"/>
+					<Add directory="/Users/jcoulter/libbitcoin/builds/msvc"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/math/external"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/chain"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/machine"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/wallet"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 libbitcoin"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="libbitcoin/fast">
+				<Option output="/Users/jcoulter/libbitcoin/cmake-build-debug/libbitcoin" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jcoulter/libbitcoin/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jcoulter/libbitcoin/builds"/>
+					<Add directory="/Users/jcoulter/libbitcoin/builds/msvc"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility"/>
+					<Add directory="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/math/external"/>
+					<Add directory="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/chain"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/machine"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/math"/>
+					<Add directory="/Users/jcoulter/libbitcoin/test/wallet"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 libbitcoin/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jcoulter/libbitcoin/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/jcoulter/libbitcoin/builds/msvc/resource.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/examples/main.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/block.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/chain_state.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/compact.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/header.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/history.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/input.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/input_point.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/output.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/output_point.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/point.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/point_iterator.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/point_value.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/points_value.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/script.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/stealth.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/transaction.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/chain/witness.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/compat.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/compat.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/authority.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/base16.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/base2.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/base58.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/base64.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/checkpoint.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/directory.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/endpoint.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/hash160.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/hash256.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/parameter.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/parser.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/printer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/settings.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/config/sodium.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/constants.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/define.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/error.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats/base_10.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats/base_16.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats/base_58.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats/base_64.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/formats/base_85.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/handlers.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/attributes.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features/counter.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features/gauge.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features/metric.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features/rate.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/features/timer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/file_char_traits.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/file_collector.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/file_collector_repository.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/file_counter_formatter.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/rotable_file.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/severity.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/sink.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/source.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/statsd_sink.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/statsd_source.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/log/udp_client_sink.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/interpreter.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/number.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/opcode.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/operation.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/program.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/rule_fork.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/script_pattern.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/script_version.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/machine/sighash_algorithm.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math/checksum.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math/crypto.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math/elliptic_curve.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math/hash.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math/limits.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math/stealth.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/math/uint256.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/address.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/alert.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/alert_payload.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/block.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/block_transactions.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/compact_block.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/fee_filter.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/filter_add.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/filter_clear.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/filter_load.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/get_address.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/get_block_transactions.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/get_blocks.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/get_data.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/get_headers.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/header.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/headers.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/heading.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/inventory.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/inventory_vector.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/memory_pool.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/merkle_block.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/messages.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/network_address.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/not_found.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/ping.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/pong.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/prefilled_transaction.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/reject.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/send_compact.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/send_headers.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/transaction.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/verack.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/message/version.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode/console_streambuf.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode/file_lock.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode/ifstream.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode/ofstream.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode/unicode.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode/unicode_istream.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode/unicode_ostream.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/unicode/unicode_streambuf.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/array_slice.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/asio.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/assert.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/atomic.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/binary.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/collection.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/color.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/conditional_lock.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/container_sink.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/container_source.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/data.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/deadline.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/decorator.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/delegates.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/deserializer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/dispatcher.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/enable_shared_from_base.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/endian.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/exceptions.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/flush_lock.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/interprocess_lock.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/istream_reader.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/monitor.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/noncopyable.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/ostream_writer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/pending.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/png.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/prioritized_mutex.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/pseudo_random.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/reader.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/resubscriber.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/scope_lock.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/sequencer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/sequential_lock.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/serializer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/socket.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/string.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/subscriber.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/synchronizer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/thread.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/threadpool.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/timer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/track.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/work.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/utility/writer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/version.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/bitcoin_uri.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/dictionary.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/ec_private.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/ec_public.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/ek_private.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/ek_public.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/ek_token.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/encrypted_keys.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/hd_private.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/hd_public.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/message.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/mini_keys.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/mnemonic.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/payment_address.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/qrcode.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/select_outputs.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/stealth_address.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/stealth_receiver.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/stealth_sender.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/uri.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/include/bitcoin/bitcoin/wallet/uri_reader.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/block.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/chain_state.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/compact.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/header.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/input.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/output.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/output_point.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/point.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/point_iterator.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/point_value.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/points_value.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/script.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/transaction.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/chain/witness.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/authority.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/base16.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/base2.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/base58.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/base64.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/checkpoint.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/directory.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/endpoint.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/hash160.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/hash256.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/parameter.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/parser.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/printer.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/config/sodium.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/error.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/formats/base_10.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/formats/base_16.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/formats/base_58.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/formats/base_64.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/formats/base_85.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/log/file_collector.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/log/file_collector_repository.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/log/file_counter_formatter.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/log/sink.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/log/statsd_sink.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/log/udp_client_sink.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/machine/interpreter.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/machine/number.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/machine/opcode.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/machine/operation.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/machine/program.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/checksum.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/crypto.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/elliptic_curve.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/aes256.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/aes256.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/crypto_scrypt.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/crypto_scrypt.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/hmac_sha256.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/hmac_sha256.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/hmac_sha512.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/hmac_sha512.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/lax_der_parsing.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/lax_der_parsing.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/pbkdf2_sha256.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/pbkdf2_sha256.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/pkcs5_pbkdf2.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/pkcs5_pbkdf2.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/ripemd160.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/ripemd160.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/sha1.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/sha1.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/sha256.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/sha256.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/sha512.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/sha512.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/zeroize.c">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/external/zeroize.h">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/hash.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/secp256k1_initializer.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/secp256k1_initializer.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/math/stealth.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/alert.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/alert_payload.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/block.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/block_transactions.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/compact_block.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/fee_filter.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/filter_add.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/filter_clear.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/filter_load.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/get_address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/get_block_transactions.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/get_blocks.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/get_data.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/get_headers.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/header.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/headers.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/heading.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/inventory.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/inventory_vector.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/memory_pool.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/merkle_block.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/messages.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/network_address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/not_found.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/ping.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/pong.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/prefilled_transaction.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/reject.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/send_compact.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/send_headers.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/transaction.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/verack.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/message/version.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/unicode/console_streambuf.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/unicode/ifstream.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/unicode/ofstream.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/unicode/unicode.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/unicode/unicode_istream.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/unicode/unicode_ostream.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/unicode/unicode_streambuf.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/binary.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/conditional_lock.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/deadline.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/dispatcher.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/flush_lock.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/interprocess_lock.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/istream_reader.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/monitor.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/ostream_writer.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/png.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/prioritized_mutex.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/pseudo_random.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/scope_lock.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/sequencer.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/sequential_lock.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/socket.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/string.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/thread.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/threadpool.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/utility/work.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/bitcoin_uri.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/dictionary.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/ec_private.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/ec_public.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/ek_private.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/ek_public.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/ek_token.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/encrypted_keys.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/hd_private.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/hd_public.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/message.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/mini_keys.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/mnemonic.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys/parse_encrypted_key.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys/parse_encrypted_prefix.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys/parse_encrypted_private.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys/parse_encrypted_private.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys/parse_encrypted_public.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys/parse_encrypted_public.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys/parse_encrypted_token.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/parse_encrypted_keys/parse_encrypted_token.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/payment_address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/qrcode.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/select_outputs.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/stealth_address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/stealth_receiver.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/stealth_sender.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/src/wallet/uri.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/block.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/compact.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/header.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/input.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/output.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/output_point.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/point.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/point_iterator.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/point_value.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/points_value.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/satoshi_words.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/script.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/script.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/chain/transaction.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/config/authority.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/config/base58.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/config/checkpoint.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/config/endpoint.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/config/hash256.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/config/parameter.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/config/printer.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/formats/base_10.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/formats/base_16.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/formats/base_58.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/formats/base_64.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/formats/base_85.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/machine/number.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/machine/number.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/machine/opcode.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/machine/operation.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/main.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/math/checksum.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/math/elliptic_curve.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/math/hash.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/math/hash.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/math/limits.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/math/stealth.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/math/uint256.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/alert.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/alert_payload.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/block.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/block_transactions.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/compact_block.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/fee_filter.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/filter_add.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/filter_clear.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/filter_load.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/get_address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/get_block_transactions.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/get_blocks.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/get_data.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/get_headers.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/header.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/headers.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/heading.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/inventory.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/inventory_vector.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/memory_pool.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/merkle_block.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/messages.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/network_address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/not_found.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/ping.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/pong.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/prefilled_transaction.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/reject.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/send_compact.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/send_headers.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/transaction.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/verack.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/message/version.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/unicode/unicode.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/unicode/unicode_istream.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/unicode/unicode_ostream.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/binary.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/collection.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/data.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/endian.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/png.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/pseudo_random.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/serializer.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/stream.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/utility/thread.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/bitcoin_uri.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/ec_private.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/ec_public.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/encrypted_keys.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/hd_private.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/hd_public.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/message.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/mnemonic.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/mnemonic.hpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/payment_address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/qrcode.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/select_outputs.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/stealth_address.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/stealth_receiver.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/stealth_sender.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/uri.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/test/wallet/uri_reader.cpp">
+			<Option target="libbitcoin"/>
+		</Unit>
+		<Unit filename="/Users/jcoulter/libbitcoin/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
