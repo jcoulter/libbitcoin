@@ -332,9 +332,9 @@ int main() {
 //    derivation_path change_path(49, 1, 0, 1, 0);
 
 
-    usable_address input1(privateKey, derivation_path(49, 1, 0, 0, 2));
+    usable_address input1(privateKey, derivation_path(49, 1, 0, 0, 3));
 
-    usable_address change(privateKey, derivation_path(49, 1, 0, 1, 1));
+    usable_address change(privateKey, derivation_path(49, 1, 0, 1, 2));
 
 
 
@@ -357,9 +357,9 @@ int main() {
     tx.set_version(1u);
     //Make Output
 
-    payment_address toAddress = wallet::payment_address("2MtCTasDMj8AADvGvviACU38B2Xw3sR4QVP");
+    payment_address toAddress = wallet::payment_address("2MwvupoANz9CnG7xJJ3FDeZ3dZ1VmJWS9kE");
     cout << "Payment Address (toAddress): " << toAddress << "\n";
-    uint64_t amount = 60000000;
+    uint64_t amount = 59000000;
 //    btc_to_satoshi(amount, "0.0001");
 //    tx.outputs().push_back(output(amount, script(script().to_pay_script_hash_pattern(toAddress.hash()))));
 
@@ -393,9 +393,9 @@ int main() {
     chain::point_value utxo1(chain::point
                                      {
                                              hash_literal(
-                                                     "c1977e1af3690ffb693da14e3c2ca273fb57091dfae1c876935560237bf1ddec"),
+                                                     "6519265072e7ee209321f11587fa598bfaf60b429e9dfd7a9efa2b5ccad29ea3"),
                                              0u
-                                     }, 65000000);
+                                     }, 60000000);
 
 //    if(retrieved_utxo == utxo1){
 //        cout << "They are the same!\n";
@@ -460,3 +460,5 @@ int main() {
 // 01000000000101ecddf17b2360559376c8e1fa1d0957fb73a22c3c4ea13d69fb0f69f31a7e97c100000000171600147cbe2f2fb7ba9cee0f58f44a43788b3da9cdd88effffffff02008793030000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d128730244c000000000017a914c8b03ea47156babe180d5e7c319867cb4ad68c39870247304402205f5aef7ccbe7c375e7262e35d7651400d74297b15e202bae415b91627a1ecdca02206b770ad5273a8ae046b7165f392e908eb8d33fe50a4fd7a5d9c32dd9659183ea0121031f00162786f395fe02bb443934edac236f4b6570ba5129b4acd684cb7208f39600000000
 // 01000000000101ecddf17b2360559376c8e1fa1d0957fb73a22c3c4ea13d69fb0f69f31a7e97c100000000171600147cbe2f2fb7ba9cee0f58f44a43788b3da9cdd88effffffff02008793030000000017a9140a723a3bfd9d93b5831d05b5d5cf02b7c5683d128730244c000000000017a914c8b03ea47156babe180d5e7c319867cb4ad68c39870247304402205f5aef7ccbe7c375e7262e35d7651400d74297b15e202bae415b91627a1ecdca02206b770ad5273a8ae046b7165f392e908eb8d33fe50a4fd7a5d9c32dd9659183ea0121031f00162786f395fe02bb443934edac236f4b6570ba5129b4acd684cb7208f39600000000
 
+
+// 01000000000101a39ed2ca5c2bfa9e7afd9d9e420bf6fa8b59fa8715f1219320eee772502619650000000017160014232b0a07cb7d6f7ed8ad58eb75a948a7bb884780ffffffff02c04484030000000017a9143361fabb3a1d7367d5664e41870bf86aa074e22d87301b0f000000000017a9146378fa401dd34160e17021989bd913d940f26ffc870247304402202f7b320df875b3206d431e4e7b4edecb5fcc64b75a4b97183cf6591d9b56a86a02201291917f9225ee0670c52916a8cff17fcdc97904ed4f7f12ead73db50565f26e0121035829a0fbcfbf02a179cdce0b5544ab8166337e0b96d963bb3bd14c0f4ceb1a6a00000000

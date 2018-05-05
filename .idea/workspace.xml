@@ -13,17 +13,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf698b1c-92f7-4365-bb75-89ac1ec351fb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/examples/balance.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/p2w_examples.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/libbitcoin.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/libbitcoin.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/libbitcoin.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/libbitcoin.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/segwit_simple_spend.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/examples/segwit_simple_spend.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/spend_simple" beforeDir="false" afterPath="$PROJECT_DIR$/examples/spend_simple" afterDir="false" />
     </list>
@@ -52,7 +41,7 @@
           <file leaf-file-name="segwit_simple_spend.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
+                <state relative-caret-position="1695">
                   <caret line="447" column="2" lean-forward="true" selection-start-line="447" selection-start-column="2" selection-end-line="447" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#30#0" expanded="true" />
@@ -238,12 +227,12 @@
       <updated>1525193644735</updated>
       <workItem from="1525193647875" duration="1345000" />
       <workItem from="1525478651281" duration="1841000" />
-      <workItem from="1525481455985" duration="6633000" />
+      <workItem from="1525481455985" duration="6914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9819000" />
+    <option name="totallyTimeSpent" value="10100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -362,7 +351,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/segwit_simple_spend.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="1695">
           <caret line="447" column="2" lean-forward="true" selection-start-line="447" selection-start-column="2" selection-end-line="447" selection-end-column="2" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
